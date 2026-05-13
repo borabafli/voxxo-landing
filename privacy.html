@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Voxxo</title>
+  <meta name="description" content="How Voxxo collects, uses, stores, and deletes your data." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-header">
+    <div class="container">
+      <p class="crumbs"><a href="index.html">Voxxo</a> · Privacy Policy</p>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Effective date: 13 May 2026 · Last updated: 13 May 2026</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <p>
+      This Privacy Policy explains how <strong>Lorem Software</strong> ("Lorem Software", "we", "us") collects, uses,
+      stores, and protects information when you use the <strong>Voxxo</strong> mobile application ("Voxxo", the "App").
+      Voxxo is an AI-powered voice notes app that lets you record audio, transcribe it to text, generate
+      AI summaries, translate notes, and (optionally) sync them across devices.
+    </p>
+    <p>
+      We designed Voxxo to be <strong>privacy-first</strong>: most of your data lives on your device. Cloud features
+      are optional and only used when you sign in or subscribe to Voxxo Pro.
+    </p>
+
+    <div class="callout">
+      <strong>Quick summary:</strong> We collect only what's necessary to make Voxxo work. We do not sell your data.
+      We do not use your voice recordings or notes to train any AI model. You can delete your account
+      and all associated data at any time from inside the App.
+    </div>
+
+    <h2>1. Who is the data controller?</h2>
+    <p>
+      Lorem Software<br/>
+      Owner / Founder: Mert Zeybek<br/>
+      Address: Değirmendere, Kuşadası, Aydın, Türkiye<br/>
+      Contact: <a href="mailto:info@loremsoftware.com">info@loremsoftware.com</a>
+    </p>
+
+    <h2>2. Information we collect</h2>
+
+    <h3>2.1 Information you provide</h3>
+    <ul>
+      <li><strong>Account information</strong> (only if you sign in): email address, display name, and an account identifier issued by Apple if you use Sign in with Apple. Apple Sign-In may return a private relay email; we use whatever email you choose to share.</li>
+      <li><strong>Profile preferences:</strong> language, default speech-to-text provider, and other in-app settings.</li>
+      <li><strong>Content you create:</strong> voice recordings, transcripts, translated text, AI summaries, folders, tags, and any text you type into a note.</li>
+      <li><strong>Support messages</strong> you send to <a href="mailto:info@loremsoftware.com">info@loremsoftware.com</a>.</li>
+    </ul>
+
+    <h3>2.2 Information collected automatically</h3>
+    <ul>
+      <li><strong>Subscription status</strong> from RevenueCat (whether you have an active Voxxo Pro entitlement, plan type, renewal status). We do not receive your full payment card or banking details — those stay with Apple.</li>
+      <li><strong>Diagnostic and crash logs</strong> (only if you have enabled Apple's "Share With App Developers" setting). These contain technical information about device model and OS version, not the content of your notes.</li>
+      <li><strong>Usage counters</strong> (e.g. seconds of speech-to-text used in the current period) to enforce free-tier limits and Pro entitlements.</li>
+    </ul>
+
+    <h3>2.3 Information we do <em>not</em> collect</h3>
+    <ul>
+      <li>We do not access your contacts, photos, calendar, location, or browsing history.</li>
+      <li>We do not embed third-party advertising SDKs and we do not use the App Tracking Transparency framework, because we do not track you across other companies' apps or websites.</li>
+      <li>We do not collect your raw payment-method details.</li>
+    </ul>
+
+    <h2>3. How we use your information</h2>
+    <table>
+      <tr><th>Purpose</th><th>What we use</th><th>Legal basis (GDPR)</th></tr>
+      <tr>
+        <td>Provide the core App: record, transcribe, summarize, translate, and (optionally) sync your notes.</td>
+        <td>Account info, content, preferences.</td>
+        <td>Performance of the contract you accept by using Voxxo.</td>
+      </tr>
+      <tr>
+        <td>Operate Voxxo Pro subscriptions and check entitlements.</td>
+        <td>RevenueCat customer ID, subscription status, usage counters.</td>
+        <td>Performance of the contract; legitimate interest in fraud prevention.</td>
+      </tr>
+      <tr>
+        <td>Improve reliability (e.g. fix crashes).</td>
+        <td>Aggregated, non-content technical logs.</td>
+        <td>Legitimate interest in maintaining a working product.</td>
+      </tr>
+      <tr>
+        <td>Respond to support requests.</td>
+        <td>Email address, message content.</td>
+        <td>Legitimate interest in helping our users.</td>
+      </tr>
+    </table>
+
+    <h2>4. Voice, microphone, and speech recognition</h2>
+    <p>
+      Voxxo asks for microphone and speech-recognition permissions <strong>only when you start a recording</strong>.
+      Recording is an explicit, user-initiated action — we never listen in the background.
+    </p>
+    <ul>
+      <li><strong>On-device transcription (default for free accounts):</strong> audio is processed by Apple's on-device speech recognition. Audio and transcripts stay on your device unless you choose to sync.</li>
+      <li><strong>Cloud transcription (Voxxo Pro, optional):</strong> audio is sent over an encrypted connection to our backend (Supabase Edge Functions in the Tokyo region) and forwarded to a third-party speech-to-text provider (e.g. Deepgram). Providers process the audio only to return a transcript and do not retain it for training.</li>
+      <li><strong>AI summaries / edits:</strong> when you trigger an AI feature, the relevant transcript text is sent to our AI provider (e.g. OpenAI / Anthropic) through our backend solely to generate the requested output. We instruct providers not to use your data for model training, in accordance with their enterprise terms.</li>
+    </ul>
+
+    <h2>5. Where your data lives</h2>
+    <ul>
+      <li><strong>On your device:</strong> WatermelonDB (SQLite) stores all your notes, transcripts, and metadata locally. Audio files are stored in the App's sandboxed file system.</li>
+      <li><strong>In the cloud (only if you sign in and/or sync is enabled):</strong> Supabase project hosted in Tokyo, Japan. Data is encrypted in transit (TLS 1.2+) and at rest. Row-Level Security policies ensure that one user can never read another user's data.</li>
+      <li><strong>Apple:</strong> handles all in-app purchases. We never see your card details.</li>
+      <li><strong>RevenueCat:</strong> stores anonymized subscription state.</li>
+    </ul>
+
+    <h2>6. Sharing with third parties</h2>
+    <p>We share information only with the limited set of processors required to operate Voxxo:</p>
+    <ul>
+      <li><strong>Supabase</strong> (database, auth, storage, edge functions).</li>
+      <li><strong>RevenueCat</strong> (subscription management).</li>
+      <li><strong>Apple</strong> (Sign in with Apple, App Store payments, on-device speech recognition).</li>
+      <li><strong>Speech-to-text providers</strong> (e.g. Deepgram) — Pro users only, and only when cloud STT is enabled.</li>
+      <li><strong>AI providers</strong> (e.g. OpenAI, Anthropic) — only when you trigger an AI summary or edit.</li>
+    </ul>
+    <p>We do not sell, rent, or trade your personal data to anyone. We never share data with advertising networks.</p>
+
+    <h2>7. International transfers</h2>
+    <p>
+      Because Voxxo is operated from Türkiye and uses cloud providers in Japan, the United States and the EU, your
+      data may be transferred outside your country of residence. Where required (e.g. for EU/UK users), we rely on
+      Standard Contractual Clauses or equivalent safeguards offered by our processors.
+    </p>
+
+    <h2>8. How long we keep your data</h2>
+    <ul>
+      <li>Notes, transcripts, recordings: kept until you delete them or delete your account.</li>
+      <li>Subscription records: kept as long as you have a Voxxo account, plus up to 7 years for tax/accounting compliance.</li>
+      <li>Support emails: kept for up to 24 months after the conversation ends.</li>
+      <li>Diagnostic logs: kept for up to 30 days.</li>
+    </ul>
+
+    <h2>9. Your rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Access the personal data we hold about you.</li>
+      <li>Correct inaccurate data (you can edit your profile from Settings).</li>
+      <li>Export your data (Settings → Export All Notes).</li>
+      <li>Delete your account and all associated data (Settings → Delete Account, or see our <a href="account-deletion.html">Account Deletion</a> page).</li>
+      <li>Withdraw consent or object to processing.</li>
+      <li>Lodge a complaint with your local data protection authority.</li>
+    </ul>
+    <p>Send any request to <a href="mailto:info@loremsoftware.com">info@loremsoftware.com</a>. We respond within 30 days.</p>
+
+    <h2>10. Children</h2>
+    <p>
+      Voxxo is not directed to children under 13 (or under 16 in the EU). We do not knowingly collect personal data
+      from children. If you believe a child has used Voxxo, contact us and we will delete the data.
+    </p>
+
+    <h2>11. Security</h2>
+    <p>
+      We use TLS for all network traffic, row-level security in the database, scoped service tokens for
+      backend functions, and Apple's secure enclave (via expo-secure-store) for credentials on device.
+      No system is perfectly secure, but we follow industry best practices.
+    </p>
+
+    <h2>12. Changes to this policy</h2>
+    <p>
+      If we make material changes, we will update the "Last updated" date at the top and, where appropriate,
+      surface a notice inside the App. Continued use after the change means you accept the updated policy.
+    </p>
+
+    <h2>13. Contact</h2>
+    <p>
+      Questions, requests, or complaints?<br/>
+      Mert Zeybek — Lorem Software<br/>
+      Değirmendere, Kuşadası, Aydın, Türkiye<br/>
+      <a href="mailto:info@loremsoftware.com">info@loremsoftware.com</a>
+    </p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Lorem Software · <a href="index.html">Home</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

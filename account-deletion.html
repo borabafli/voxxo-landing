@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account &amp; Data Deletion — Voxxo</title>
+  <meta name="description" content="How to delete your Voxxo account and all associated data." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-header">
+    <div class="container">
+      <p class="crumbs"><a href="index.html">Voxxo</a> · Account &amp; Data Deletion</p>
+      <h1>Account &amp; Data Deletion</h1>
+      <p class="updated">You are always in control of your data.</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <p>
+      Voxxo lets you permanently delete your account and all associated data directly from inside the App,
+      with no email or support ticket required. This page exists to comply with Apple App Store guideline
+      <strong>5.1.1(v)</strong>.
+    </p>
+
+    <div class="callout callout-warn">
+      <strong>This action is permanent.</strong> Once your account is deleted, your notes, transcripts,
+      recordings, AI summaries, folders, tags, and account profile are erased and cannot be recovered.
+      Cancelling or refunding a subscription is handled separately through Apple.
+    </div>
+
+    <h2>Delete your account from the App</h2>
+    <ol>
+      <li>Open <strong>Voxxo</strong> on your iPhone or iPad.</li>
+      <li>Tap the <strong>Settings</strong> icon (top-right of the home screen).</li>
+      <li>Scroll to the <strong>Account</strong> section.</li>
+      <li>Tap <strong>Delete Account</strong>.</li>
+      <li>Read the confirmation dialog and confirm. You'll be signed out as soon as deletion completes.</li>
+    </ol>
+
+    <h2>What gets deleted</h2>
+    <ul>
+      <li>Your account profile (display name, email, language, preferences).</li>
+      <li>All notes, transcripts, translations, and AI summaries linked to your account.</li>
+      <li>All audio recordings stored in our cloud storage.</li>
+      <li>All folders, tags, and organisational metadata.</li>
+      <li>Sync state, usage counters, and any workspace memberships.</li>
+      <li>Any locally-cached data on the device where you confirmed deletion.</li>
+    </ul>
+
+    <h2>What is <em>not</em> deleted automatically</h2>
+    <ul>
+      <li><strong>App Store subscription:</strong> If you have an active Voxxo Pro subscription, you must cancel it separately at <em>iOS Settings → [your name] → Subscriptions → Voxxo</em>. Apple does not allow developers to cancel subscriptions on your behalf.</li>
+      <li><strong>Local data on other devices:</strong> If you used Voxxo on more than one device, sign out and uninstall the App on each device to remove any local cache.</li>
+      <li><strong>Limited records we must keep by law:</strong> certain billing/tax records may be retained by Apple and by us for up to 7 years to comply with accounting and tax obligations. These records do not contain the content of your notes.</li>
+      <li><strong>Support emails:</strong> if you've emailed support, those threads remain in our inbox for up to 24 months. Reply to the thread asking us to delete it and we will.</li>
+    </ul>
+
+    <h2>How to also delete your subscription</h2>
+    <ol>
+      <li>Open <em>Settings</em> on your device.</li>
+      <li>Tap your name at the top.</li>
+      <li>Tap <strong>Subscriptions</strong>.</li>
+      <li>Select <strong>Voxxo</strong> and tap <strong>Cancel Subscription</strong>.</li>
+    </ol>
+
+    <h2>Can't open the App?</h2>
+    <p>
+      If you cannot use the in-app delete flow (for example, your device is broken or you no longer have access to it),
+      email <a href="mailto:info@loremsoftware.com?subject=Account%20deletion%20request">info@loremsoftware.com</a>
+      from the email address associated with your Voxxo account. Include the email and the approximate date you signed up.
+      We will verify your identity and complete the deletion within <strong>30 days</strong>.
+    </p>
+
+    <h2>Privacy</h2>
+    <p>For more details about how we handle your data, see our <a href="privacy.html">Privacy Policy</a>.</p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Lorem Software · <a href="index.html">Home</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
