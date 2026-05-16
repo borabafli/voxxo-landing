@@ -12,7 +12,7 @@
     <div class="container">
       <p class="crumbs"><a href="index.html">Voxxo</a> · Privacy Policy</p>
       <h1>Privacy Policy</h1>
-      <p class="updated">Effective date: 13 May 2026 · Last updated: 13 May 2026</p>
+      <p class="updated">Effective date: 13 May 2026 · Last updated: 16 May 2026</p>
     </div>
   </div>
 
@@ -96,11 +96,27 @@
       Voxxo asks for microphone and speech-recognition permissions <strong>only when you start a recording</strong>.
       Recording is an explicit, user-initiated action — we never listen in the background.
     </p>
+    <p>
+      Before any voice data leaves your device, Voxxo shows an in-app disclosure on the Welcome screen of
+      onboarding that names the third-party processors used for transcription and AI features.
+      By tapping <em>Get Started</em>, you consent to this processing. You can review or withdraw
+      consent at any time by deleting the App or by contacting us.
+    </p>
     <ul>
       <li><strong>On-device transcription (default for free accounts):</strong> audio is processed by Apple's on-device speech recognition. Audio and transcripts stay on your device unless you choose to sync.</li>
-      <li><strong>Cloud transcription (Voxxo Pro, optional):</strong> audio is sent over an encrypted connection to our backend (Supabase Edge Functions in the Tokyo region) and forwarded to a third-party speech-to-text provider (e.g. Deepgram). Providers process the audio only to return a transcript and do not retain it for training.</li>
-      <li><strong>AI summaries / edits:</strong> when you trigger an AI feature, the relevant transcript text is sent to our AI provider (e.g. OpenAI / Anthropic) through our backend solely to generate the requested output. We instruct providers not to use your data for model training, in accordance with their enterprise terms.</li>
+      <li><strong>Cloud transcription (Voxxo Pro, optional):</strong> audio is sent over an encrypted connection to our backend (Supabase Edge Functions in the Tokyo region) and forwarded to one of two third-party speech-to-text providers:
+        <ul>
+          <li><strong>Deepgram, Inc.</strong> — used for real-time streaming transcription. Data is processed solely to return a transcript and is not retained for model training under their enterprise terms (<a href="https://deepgram.com/privacy" target="_blank" rel="noopener">deepgram.com/privacy</a>).</li>
+          <li><strong>AssemblyAI, Inc.</strong> — used for batch transcription with speaker separation (diarization). Data is processed solely to return a transcript and is not retained for model training under their enterprise terms (<a href="https://www.assemblyai.com/legal/privacy-policy" target="_blank" rel="noopener">assemblyai.com/legal/privacy-policy</a>).</li>
+        </ul>
+      </li>
+      <li><strong>AI features (summaries, titles, tags, action items, edits, translations):</strong> when you trigger one of these features, the relevant <em>transcript text</em> (not the raw audio) is sent through our backend to <strong>Anthropic, PBC</strong> (the Claude API) solely to generate the requested output. Anthropic does not use API inputs or outputs to train its models (<a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">anthropic.com/legal/privacy</a>).</li>
     </ul>
+    <p>
+      We have data-processing agreements in place with each of Deepgram, AssemblyAI, and Anthropic that
+      require them to provide the <strong>same or equivalent level of data protection</strong> as set out in this Privacy
+      Policy, including confidentiality, security, and a prohibition on using your data to train AI models.
+    </p>
 
     <h2>5. Where your data lives</h2>
     <ul>
@@ -111,14 +127,40 @@
     </ul>
 
     <h2>6. Sharing with third parties</h2>
-    <p>We share information only with the limited set of processors required to operate Voxxo:</p>
-    <ul>
-      <li><strong>Supabase</strong> (database, auth, storage, edge functions).</li>
-      <li><strong>RevenueCat</strong> (subscription management).</li>
-      <li><strong>Apple</strong> (Sign in with Apple, App Store payments, on-device speech recognition).</li>
-      <li><strong>Speech-to-text providers</strong> (e.g. Deepgram) — Pro users only, and only when cloud STT is enabled.</li>
-      <li><strong>AI providers</strong> (e.g. OpenAI, Anthropic) — only when you trigger an AI summary or edit.</li>
-    </ul>
+    <p>We share information only with the limited set of processors required to operate Voxxo. Each processor is contractually required to provide the same or equivalent level of data protection set out in this Privacy Policy:</p>
+    <table>
+      <tr><th>Processor</th><th>Purpose</th><th>What is shared</th></tr>
+      <tr>
+        <td><strong>Supabase Inc.</strong></td>
+        <td>Database, authentication, storage, and edge functions.</td>
+        <td>Account info, notes, transcripts, audio files (only if you sign in / sync).</td>
+      </tr>
+      <tr>
+        <td><strong>RevenueCat, Inc.</strong></td>
+        <td>Subscription management.</td>
+        <td>Anonymized subscription state and customer ID.</td>
+      </tr>
+      <tr>
+        <td><strong>Apple Inc.</strong></td>
+        <td>Sign in with Apple, App Store payments, on-device speech recognition.</td>
+        <td>Apple-issued user identifier, transaction info. On-device speech stays on device.</td>
+      </tr>
+      <tr>
+        <td><strong>Deepgram, Inc.</strong></td>
+        <td>Cloud speech-to-text (real-time). Pro users only, when cloud STT is enabled.</td>
+        <td>Audio recording for transcription. Not retained for training.</td>
+      </tr>
+      <tr>
+        <td><strong>AssemblyAI, Inc.</strong></td>
+        <td>Cloud speech-to-text (batch with speaker diarization). Pro users only.</td>
+        <td>Audio recording for transcription. Not retained for training.</td>
+      </tr>
+      <tr>
+        <td><strong>Anthropic, PBC</strong></td>
+        <td>AI summaries, titles, tags, action items, edits, and translations (Claude API).</td>
+        <td>Transcript text only (no raw audio). Not retained for training.</td>
+      </tr>
+    </table>
     <p>We do not sell, rent, or trade your personal data to anyone. We never share data with advertising networks.</p>
 
     <h2>7. International transfers</h2>
